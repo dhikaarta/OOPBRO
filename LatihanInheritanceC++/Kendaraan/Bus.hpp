@@ -12,13 +12,14 @@ public:
     // ctor
     Bus();
     // user-defined ctor
-    Bus(int kapasitas, int nomorKendaraan, string kategori, string merk, int tahunKeluaran);
+    Bus(int kapasitas, int nomorKendaraan, string merk, int tahunKeluaran);
     // cctor
     Bus(const Bus &b);
     // dtor: tidak diperlukan karena mengalokasikan memori heap
-    ~Bus(){};
+    ~Bus();
 
     void PrintInfo();
+    int BiayaSewa(int lamaSewa);
 };
 
 #endif

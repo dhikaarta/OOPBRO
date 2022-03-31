@@ -11,20 +11,19 @@ private:
     int nomorKendaraan;
     int tahunKeluaran;
     string merk;
-    string kategori;
 
 public:
     // default ctor
     Kendaraan();
     // user-defined ctor
-    Kendaraan(int nomorKendaraan, string kategori, string merk, int tahunKeluaran); 
+    Kendaraan(int nomorKendaraan, string merk, int tahunKeluaran);
     // cctor
     Kendaraan(const Kendaraan &k);
     // dtor
-    ~Kendaraan(); 
-    
+    ~Kendaraan();
+
     virtual void PrintInfo();
-    int BiayaSewa(int lamaSewa);
+    virtual int BiayaSewa(int lamaSewa);
 };
 
 #endif

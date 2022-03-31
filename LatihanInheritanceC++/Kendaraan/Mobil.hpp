@@ -1,5 +1,5 @@
-#ifndef BUS_HPP
-#define BUS_HPP
+#ifndef MOBIL_HPP
+#define MOBIL_HPP
 
 #include "Kendaraan.hpp"
 
@@ -12,14 +12,14 @@ public:
     // ctor
     Mobil();
     // user-defined ctor
-    Mobil(string supir, int nomorKendaraan, string kategori, string merk, int tahunKeluaran);
+    Mobil(string supir, int nomorKendaraan, string merk, int tahunKeluaran);
     // cctor
     Mobil(const Mobil &m);
     // dtor: tidak diperlukan karena mengalokasikan memori heap
-    ~Mobil(){};
+    ~Mobil();
 
     void PrintInfo();
-
+    int BiayaSewa(int lamaSewa);
 };
 
 #endif

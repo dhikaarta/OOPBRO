@@ -21,7 +21,7 @@ KoleksiKendaraan::KoleksiKendaraan(int size)
 KoleksiKendaraan::KoleksiKendaraan(const KoleksiKendaraan &k)
 {
     this->kumpulanKendaraan = new Kendaraan[k.size];
-    for (int i = 0; i < k.size; i++)
+    for (int i = 0; i < k.neff; i++)
     {
         this->kumpulanKendaraan[i] = k.kumpulanKendaraan[i];
     }
