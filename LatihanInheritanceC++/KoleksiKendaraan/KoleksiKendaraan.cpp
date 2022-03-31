@@ -29,7 +29,6 @@ KoleksiKendaraan::KoleksiKendaraan(const KoleksiKendaraan &k)
     this->neff = k.neff;
 }
 
-
 KoleksiKendaraan::~KoleksiKendaraan()
 {
     delete[] this->kumpulanKendaraan;
@@ -53,6 +52,10 @@ void KoleksiKendaraan::operator<<(KoleksiKendaraan &k)
 {
     for (int i = 0; i < k.neff; i++)
     {
-        (*this) << k.kumpulanKendaraan[i];
+        if(this->neff < this->size)
+        {
+            (*this) << k.kumpulanKendaraan[i];
+        }
+        
     }
 }
